@@ -1,4 +1,4 @@
 cron:
-- description: "test dispatch vs target"
-  url: /index
+- description: "CRON JOB"
+  url: /auto_run
   schedule: every 1 mins
