@@ -1,0 +1,4 @@
+cron:
+- description: "test dispatch vs target"
+  url: /index
+  schedule: every 1 mins
