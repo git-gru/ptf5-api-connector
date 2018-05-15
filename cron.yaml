@@ -1,4 +1,4 @@
 cron:
 - description: "CRON JOB"
-  url: /auto_run
+  url: /auto_run.php
   schedule: every 1 mins
