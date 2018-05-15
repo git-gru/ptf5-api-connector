@@ -149,7 +149,7 @@ function updateDeliveryLists(){
 		if($result["status"]){
 			foreach($result["data"]["rows"] as $row){
 				$count++;
-				$insertQuery .= "( '".$row['salesorder_delivery_id']."', '".$row['target_delivery_time']."', '".$row['driver_run']."', '".$row['day_run']."', '".$row['stop_on_run']."', '".$row['salesorder_location']."', '".$row['salesorder_number']."', '".$row['vendor_name']."', '".$row['line_code']."', '".$row['product_number']."', '", '".$row['counter_person']."', '".$row['account_name']."', '".$row['ship_street']."', '".$row['ship_pobox']."', '".$row['ship_city']."', '".$row['ship_state']."', '".$row['ship_county']."', '".$row['ship_code']."', '".$row['deliveries_assigned_to']."') ,";
+				$insertQuery .= "( '".$row['salesorder_delivery_id']."', '".$row['target_delivery_time']."', '".$row['driver_run']."', '".$row['day_run']."', '".$row['stop_on_run']."', '".$row['salesorder_location']."', '".$row['salesorder_number']."', '".$row['vendor_name']."', '".$row['line_code']."', '".$row['product_number']."', '".$row['counter_person']."', '".$row['account_name']."', '".$row['ship_street']."', '".$row['ship_pobox']."', '".$row['ship_city']."', '".$row['ship_state']."', '".$row['ship_county']."', '".$row['ship_code']."', '".$row['deliveries_assigned_to']."') ,";
 			}
 			if($count > 0){
 				$insertQuery = substr($insertQuery, 0, -2);
