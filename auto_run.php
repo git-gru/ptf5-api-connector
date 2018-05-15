@@ -131,23 +131,23 @@ function updateDeliveryLists()
 	}
 	$postdata = array();
 	$postdata['data'] = '{
-	"authenticate": {
-		"apikey": "RfiqLWuptjQ5VdkNJpgKBJETAl9YHqqA"
-	},
-	"services": [
-		{
-			"call": "delivery/all",
-			"identifier": {
-				"offset": ' . $offset . ',
-				"limit": 10000,
-				"delivery_log_for": "salesorder",
-				"delivery_log_type": "assigned",
-	            "sort_column" : "target_delivery_time",
-	            "sort_order":"asc"
+		"authenticate": {
+			"apikey": "RfiqLWuptjQ5VdkNJpgKBJETAl9YHqqA"
+		},
+		"services": [
+			{
+				"call": "delivery/all",
+				"identifier": {
+					"offset": ' . $offset . ',
+					"limit": 10000,
+					"delivery_log_for": "salesorder",
+					"delivery_log_type": "assigned",
+					"sort_column" : "target_delivery_time",
+					"sort_order":"asc"
+				}
 			}
-		}
-	]
-}';
+		]
+	}';
 	$result = do_curl($postdata);
 	if ($result) {
 		$result = json_decode($result, 1);
@@ -186,22 +186,22 @@ function updateSalesOrders()
 	}
 	$postdata = array();
 	$postdata['data'] = '{
-"authenticate": {
-"apikey": "RfiqLWuptjQ5VdkNJpgKBJETAl9YHqqA"
-},
-"services": [
-{
-"call": "sales_order/search",
-"identifier": {
+		"authenticate": {
+			"apikey": "RfiqLWuptjQ5VdkNJpgKBJETAl9YHqqA"
+		},
+		"services": [
+			{
+				"call": "sales_order/search",
+				"identifier": {
 					"offset": 0,
 					"limit": 100,
-"searchkeyword": "S",
-	               "sort_column":"sales_order_number",
-	               "sort_order":"asc"
-}
-}
-]
-}';
+					"searchkeyword": "S",
+					"sort_column":"sales_order_number",
+					"sort_order":"asc"
+				}
+			}
+		]
+	}';
 	$result = do_curl($postdata);
 	if ($result) {
 		$result = json_decode($result, 1);
