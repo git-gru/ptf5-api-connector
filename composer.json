@@ -1,0 +1,11 @@
+{
+    "name": "jacky/ptf5-api-connector",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Felonius Gru",
+            "email": "new-comet-dev@outlook.com"
+        }
+    ],
+    "require": {}
+}
